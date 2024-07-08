@@ -7,7 +7,7 @@ function App() {
 
   return (
     <>
-      <h1>Edicion del domingo</h1>
+      <h1>Edicion del lunes, no prgresamos ):</h1>
       <ReactHookForm />
       <SimpleForm />
     </>
