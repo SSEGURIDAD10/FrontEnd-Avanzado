@@ -15,6 +15,11 @@ const SimpleForm = () => {
       <div className="login-container">
 
         <form onSubmit={handleSubmit}>
+{/* La función handleSubmit se ejecuta cuando se envía el formulario,
+gracias al atributo onSubmit en la etiqueta <form>. Dentro de
+handleSubmit, la llamada a event.preventDefault() previene el
+comportamiento por defecto del navegador, que sería recargar
+la página al enviar el formulario. */}
           <label htmlFor="simple-email">Email</label>
           <input
             type="text"
@@ -22,7 +27,8 @@ const SimpleForm = () => {
             placeholder="correo@mail.com"
             id="simple-email"
             autoComplete="current-password"
-            onChange={(event) => setEmail(event.target.value)}
+// onChange -> Prop de formulario. Recoge el valor en setEmail
+            // onChange={(event) => setEmail(event.target.value)}
           />
 
           <label htmlFor="simple-password">Password</label>
@@ -31,7 +37,7 @@ const SimpleForm = () => {
             name="password"
             id="simple-password"
             autoComplete="current-password"
-            onChange={(event) => setPassword(event.target.value)}
+            // onChange={(event) => setPassword(event.target.value)}
           />
 
           <button type="submit">Iniciar Sesion</button>
