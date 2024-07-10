@@ -28,7 +28,7 @@ la página al enviar el formulario. */}
             id="simple-email"
             autoComplete="current-password"
 // onChange -> Prop de formulario. Recoge el valor en setEmail
-            // onChange={(event) => setEmail(event.target.value)}
+            onChange={(event) => setEmail(event.target.value)}
           />
 
           <label htmlFor="simple-password">Password</label>
@@ -37,7 +37,7 @@ la página al enviar el formulario. */}
             name="password"
             id="simple-password"
             autoComplete="current-password"
-            // onChange={(event) => setPassword(event.target.value)}
+            onChange={(event) => setPassword(event.target.value)}
           />
 
           <button type="submit">Iniciar Sesion</button>
