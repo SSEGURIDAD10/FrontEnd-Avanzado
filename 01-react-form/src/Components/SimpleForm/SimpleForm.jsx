@@ -37,6 +37,7 @@ la página al enviar el formulario. */}
             name="password"
             id="simple-password"
             autoComplete="current-password"
+// onChange -> Prop de formulario. Recoge el valor en setPassword
             onChange={(event) => setPassword(event.target.value)}
           />
 
