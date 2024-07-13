@@ -1,0 +1,18 @@
+.home-container{
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    min-height: 100vh;
+    color: #000;
+    text-align: center;
+}
+
+.left{
+    background-color: red;
+    width: 50%;
+}
+
+.right{
+    background-color: skyblue;
+    width: 50%;
+}
