@@ -1,3 +1,5 @@
+// npm i standard -D
+
 import './App.css'
 
 function App() {
