@@ -6,4 +6,4 @@ import {createContext, useSatate, useEffect} from 'react'
 import canciones from '../Utils/listaCanciones.json'
 
 // 1) Crear contexto
-const SongContext = createContext() // Va a empezar vacío mi contexto
+// const SongContext = createContext() // Va a empezar vacío mi contexto
