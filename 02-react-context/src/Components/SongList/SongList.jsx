@@ -1,4 +1,4 @@
-import './songlist.css'
+import './songList.css'
 import { useSongContext } from '../../Hook/useSongContext'
 
 const SongList = () => {
@@ -22,6 +22,7 @@ const SongList = () => {
               }}
             >
               <h3>{song.title}</h3>
+              {/* <img src={song.img_url}/> */}
               <h3>{song.artist}</h3>
             </article>
           ))

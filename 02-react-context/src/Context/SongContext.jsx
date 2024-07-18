@@ -2,7 +2,7 @@
 // Es decir, podemos compartir la misma información entre componentes
 // De diferente jerarquia en el árbol de componentes.
 
-import { createContext, useSatate, useEffect } from "react";
+import { createContext, useState, useEffect } from "react";
 import canciones from "../Utils/listaCanciones.json";
 
 // 1) Crear contexto
