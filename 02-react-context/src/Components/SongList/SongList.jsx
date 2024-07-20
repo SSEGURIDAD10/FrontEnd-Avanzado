@@ -12,7 +12,7 @@ const SongList = () => {
     <section className='row-container'>
       {
         loading
-          ? <h2>Cargando . . .</h2>
+          ? <h2>Cargando...</h2>
           : filteredSongList.map((song) => (
             <article
               key={song.id}
