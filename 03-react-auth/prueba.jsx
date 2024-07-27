@@ -2,7 +2,7 @@ import React from 'react'
 
 const prueba = () => {
   return (
-    <div>Prueba...Ultimo dia de reposo por enfermedad ):</div>
+    <div>Prueba...</div>
   )
 }
 
