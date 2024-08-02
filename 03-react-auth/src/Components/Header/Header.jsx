@@ -1,4 +1,5 @@
-import React from "react";
+import { NavLink } from 'react-router-dom'
+import './header.scss'
 
 const Header = () => {
     return (
@@ -9,37 +10,37 @@ const Header = () => {
             <nav className="header">
                 {" "}
                 {/*  BLOQUE */}
-                <a className="header__logo" href="/">
+                <NavLink className="header__logo" to="/">
                     LOGO
-                </a>
+                </NavLink>
                 <ul className="header__nav-list" />
                 <li className="header__list-item">
-                    <a
+                    <NavLink
                         className="header__item-link header__item-link--is-active"
-                        href="/home"
+                        to="/home"
                     >
                         Home
-                    </a>
+                    </NavLink>
                 </li>
                 <li className="header__list-item">
-                    <a className="header__item-link" href="/dashboard">
+                    <NavLink className="header__item-link" to="/dashboard">
                         Dashboard
-                    </a>
+                    </NavLink>
                 </li>
                 <li className="header__list-item">
-                    <a className="header__item-link" href="/secret">
+                    <NavLink className="header__item-link" to="/secret">
                         Secret
-                    </a>
+                    </NavLink>
                 </li>
                 <li className="header__list-item">
-                    <a className="header__item-link" href="/login">
+                    <NavLink className="header__item-link" to="/login">
                         Login
-                    </a>
+                    </NavLink>
                 </li>
                 <li className="header__list-item">
-                    <a className="header__item-link" href="/signup">
+                    <NavLink className="header__item-link" to="/signup">
                         Signup
-                    </a>
+                    </NavLink>
                 </li>
             </nav>
         </>

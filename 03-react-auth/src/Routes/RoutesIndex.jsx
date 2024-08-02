@@ -1,9 +1,18 @@
 // Implementar react-router-dom
-import React from 'react'
+import { Routes, Route } from 'react-router-dom'
+// Importante tambien importar BrowserRouter
+// y RoutesIndex en App.jsx
+import { Home, Dashboard, Login, Secret, Signup } from '@/pages'
 
 const RoutesIndex = () => {
   return (
-    <div>RoutesIndex</div>
+    <Routes>
+      <Route path='/' element={<Home />} />
+      <Route path='/dashboard' element={<Dashboard />} />
+      <Route path='/login' element={<Login />} />
+      <Route path='/secret' element={<Secret />} />
+      <Route path='/signup' element={<Signup />} />
+    </Routes>
   )
 }
 
