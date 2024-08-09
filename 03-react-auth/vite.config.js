@@ -1,13 +1,13 @@
-import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react";
-import path from "path"; // añado el path para poder saber la ruta
+import { defineConfig } from "vite"; // Importa la función para definir la configuración de Vite
+import react from "@vitejs/plugin-react"; // Importa el plugin de React para Vite
+import path from "path"; // Importa el módulo path para resolver rutas
+
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react()],
-  // configuro alias para mis carpetas con @
+  plugins: [react()], // Configura el plugin de React
   resolve: {
     alias: {
-      "@": path.resolve(__dirname, "./src"),
+      "@": path.resolve(__dirname, "./src"), // Define un alias para la carpeta src
     },
   },
 });
