@@ -2,7 +2,7 @@ import '@/styles/form.css'
 
 const Secret = () => {
   return (
-    <div>Secret</div>
+    <div>Secrets 10</div>
   )
 }
 
