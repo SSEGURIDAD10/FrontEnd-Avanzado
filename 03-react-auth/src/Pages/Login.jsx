@@ -16,7 +16,7 @@ const Login = () => {
                 id="simple-email"
                 autoComplete="current-password"
               />
-              <label htmlFor="floatingInput">Email adress</label>
+              <label htmlFor="simple-email">Email adress</label>
             </div>
 
             <div className='form-floating'>

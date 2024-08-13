@@ -15,6 +15,7 @@ const Signup = () => {
             value=''
             onChange={() => {}}
             placeholder='John'
+            autoComplete="given-name"
           />
           <label htmlFor='first_name'>First Name</label>
         </div>
@@ -28,6 +29,7 @@ const Signup = () => {
             value=''
             onChange={() => {}}
             placeholder='Doe'
+            autoComplete="family-name"
           />
           <label htmlFor='last_name'>Last Name</label>
         </div>
@@ -56,6 +58,7 @@ const Signup = () => {
             value=''
             onChange={() => {}}
             placeholder='name@example.com'
+            autoComplete="email"
           />
           <label htmlFor='email'>Email address</label>
         </div>
@@ -69,6 +72,7 @@ const Signup = () => {
             value=''
             onChange={() => {}}
             placeholder='Password'
+            autoComplete='current-password'
           />
           <label htmlFor='password'>Password</label>
         </div>
