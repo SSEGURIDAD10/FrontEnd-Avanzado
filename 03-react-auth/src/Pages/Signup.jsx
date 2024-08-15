@@ -8,10 +8,10 @@ const Signup = () => {
   const { register, handleSubmit, formState: { errors },} = useForm();
   const navigate = useNavigate();
 
-  const onSubmit = (data) => {
+  const onSubmit = async (data) => {
     // Enviar el formulario Signup
     try {
-      const response = registerUserService();
+      const response = await registerUserService();
       if(response.status === 201){ // 201 Creado Nuevo, 200 Existe, 404 No existe
         navigate('/login')
         console.log('Usuario creado correctamente')
@@ -32,7 +32,6 @@ const Signup = () => {
             className='form-control'
             id='first_name'
             name='first_name'
-            value=''
             onChange={() => { }}
             placeholder='John'
             autoComplete="given-name"
@@ -47,7 +46,6 @@ const Signup = () => {
             className='form-control'
             id='last_name'
             name='last_name'
-            value=''
             onChange={() => { }}
             placeholder='Doe'
             autoComplete="family-name"
@@ -61,11 +59,10 @@ const Signup = () => {
             className='form-select'
             id='gender'
             name='gender'
-            value=''
             onChange={() => { }}
             {...register('gender')}
           >
-            <option value=''>Choose...</option>
+            <option >Choose...</option>
             <option value='M'>Male</option>
             <option value='F'>Female</option>
           </select>
@@ -78,7 +75,6 @@ const Signup = () => {
             className='form-control'
             id='email'
             name='email'
-            value=''
             onChange={() => { }}
             placeholder='name@example.com'
             autoComplete="email"
@@ -93,7 +89,6 @@ const Signup = () => {
             className='form-control'
             id='password'
             name='password'
-            value=''
             onChange={() => { }}
             placeholder='Password'
             autoComplete='current-password'
