@@ -11,7 +11,7 @@ const Signup = () => {
   const onSubmit = async (data) => {
     // Enviar el formulario Signup
     try {
-      const response = await registerUserService();
+      const response = await registerUserService(data);
       if(response.status === 201){ // 201 Creado Nuevo, 200 Existe, 404 No existe
         navigate('/login')
         console.log('Usuario creado correctamente')
@@ -80,6 +80,7 @@ const Signup = () => {
             autoComplete="email"
             {...register('email')}
           />
+          <p>{errors.email?.message}</p>
           <label htmlFor='email'>Email address</label>
         </div>
 
@@ -94,6 +95,7 @@ const Signup = () => {
             autoComplete='current-password'
             {...register('password')}
           />
+          <p>{errors.password?.message}</p>
           <label htmlFor='password'>Password</label>
         </div>
 
