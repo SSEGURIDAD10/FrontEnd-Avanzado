@@ -40,4 +40,18 @@ function AuthProvider({children}) {
             setIsAuth(true)
         }
     }, [])
+
+    // Mandamos un objeto
+    const data = {
+        isAuth,
+        userPayload,
+        login,
+        logout
+    }
+    return (
+        // RETURN DE UN COMPONENTE
+        <AuthContext.Provider value={data}>{children}</AuthContext.Provider>
+    );
 }
+
+export default { AuthContext, AuthProvider }
