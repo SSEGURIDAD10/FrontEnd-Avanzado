@@ -1,15 +1,18 @@
 import { useForm } from "react-hook-form";
 import { loginUserService } from "@/Services/userServices";
 import { useNavigate } from "react-router-dom";
+import { useAuthContext } from "../Hook/useAuthContext";
 import "@/styles/form.css";
 
 const Login = () => {
+
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
   const navigate = useNavigate();
+  const { login } = useAuthContext();
 
   const onSubmit = async (data) => {
     // Enviar el formulario Signup
