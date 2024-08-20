@@ -21,7 +21,7 @@ const Login = () => {
       if (response.status === 200) {
         // 201 Creado Nuevo, 200 Existe, 404 No existe
         navigate("/");
-        console.log("Usuario autenticado correctamente");
+        console.log("Usuario autenticado correctamente (:");
         console.log(response.data.token);
       }
     } catch (error) {
