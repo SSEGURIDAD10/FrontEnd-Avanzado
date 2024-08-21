@@ -7,7 +7,7 @@ export const useAuthContext = () => {
     const context = useContext(AuthContext)
     // Si no se crea el contexto mando un error, si e undefined lanzo el error
     if(!context) {
-        throw Error('useAuthContext debde ser usado dentro de AuthProvider')
+        throw Error('useAuthContext debe ser usado dentro de AuthProvider')
     }
     return context
 }
