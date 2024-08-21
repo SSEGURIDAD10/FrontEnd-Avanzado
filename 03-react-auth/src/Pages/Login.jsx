@@ -22,7 +22,7 @@ const Login = () => {
         // 201 Creado Nuevo, 200 Existe, 404 No existe
         navigate("/");
         console.log("Usuario autenticado correctamente (:");
-        console.log(response.data.token);
+        login(response.data.token); // Utilizar login del contexto y decodificar el token en el navegador
       }
     } catch (error) {
       console.log("Ocurrio un error en Login", error);
