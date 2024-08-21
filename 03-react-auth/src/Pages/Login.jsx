@@ -35,6 +35,7 @@ const Login = () => {
             className='form-control'
             id='floatingInput'
             placeholder='name@example.com'
+            autoComplete='email'
             {...register('email')}
           />
            <p>{errors.email?.message}</p>
