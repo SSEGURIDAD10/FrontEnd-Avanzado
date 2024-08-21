@@ -1,74 +1,64 @@
-import { useForm } from "react-hook-form";
-import { loginUserService } from "@/Services/userServices";
-import { useNavigate } from "react-router-dom";
-import { useAuthContext } from "../Hook/useAuthContext";
-import "@/styles/form.css";
+import { useForm } from 'react-hook-form'
+import { loginUserService } from '@/Services/userServices'
+import { useNavigate } from 'react-router-dom'
+import { useAuthContext } from '@/Hook/useAuthContext'
+import '@/styles/form.css'
 
 const Login = () => {
 
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm();
-  const navigate = useNavigate();
-  const { login } = useAuthContext();
+  const { register, handleSubmit, formState:{ errors } } = useForm();
+  const navigate = useNavigate()
+  const { login } = useAuthContext()
 
-  const onSubmit = async (data) => {
-    // Enviar el formulario Signup
+  const onSubmit = async (data) =>  {
+    //enviar mi formulario de signup
     try {
-      const response = await loginUserService(data);
-      if (response.status === 200) {
-        // 201 Creado Nuevo, 200 Existe, 404 No existe
-        navigate("/");
-        console.log("Usuario autenticado correctamente (:");
-        login(response.data.token); // Utilizar login del contexto y decodificar el token en el navegador
+      const response = await loginUserService(data)
+      if (response.status === 200){
+        navigate('/')
+        console.log('Usuario autenticado exitosamente')
+        login(response.data.token)  // utilizar login del contexto y decodificar el token en el navegador
+        //console.log(response.data.token)
       }
-    } catch (error) {
-      console.log("Ocurrio un error en Login", error);
+    }catch(error) {
+      console.log('Ocurrio un error en Login', error)
     }
-  };
+  }
 
   return (
-    <main className="form-signin w-100 m-auto">
-      <div className="login">
-        <h1 className="h3 mb-3 fw-normal">Login</h1>
-        <div className="login-container">
-          <form onSubmit={handleSubmit(onSubmit)}>
-            <div className="form-floating">
-              <input
-                className="form-control"
-                type="text"
-                name="email"
-                placeholder="correo@mail.com"
-                id="simple-email"
-                autoComplete="email"
-              />
-              {/* <p>{errors.email?.message}</p> */}
-              <label htmlFor="simple-email">Email adress</label>
-            </div>
-
-            <div className="form-floating">
-              <input
-                className="form-control"
-                type="password"
-                name="password"
-                id="simple-password"
-                autoComplete="current-password"
-                placeholder="Password"
-              />
-              {/* <p>{errors.password?.message}</p> */}
-              <label htmlFor="simple-password">Password</label>
-            </div>
-
-            <button className="w-100 btn btn-lg btn-primary" type="submit">
-              Sign in
-            </button>
-          </form>
+    <main className='form-signin w-100 m-auto'>
+      <form onSubmit={handleSubmit(onSubmit)}>
+        <h1 className='h3 mb-3 fw-normal'>Please sign in</h1>
+        <div className='form-floating'>
+          <input
+            type='email'
+            className='form-control'
+            id='floatingInput'
+            placeholder='name@example.com'
+            {...register('email')}
+          />
+           <p>{errors.email?.message}</p>
+          <label htmlFor='floatingInput'>Email address</label>
         </div>
-      </div>
-    </main>
-  );
-};
+        <div className='form-floating'>
+          <input
+            type='password'
+            className='form-control'
+            id='floatingPassword'
+            placeholder='Password'
+            {...register('password')}
+          />
+           <p>{errors.password?.message}</p>
+          <label htmlFor='floatingPassword'>Password</label>
+        </div>
 
-export default Login;
+        <button className='btn btn-primary w-100 py-2' type='submit'>
+          Sign in
+        </button>
+        <p className='mt-5 mb-3 text-body-secondary'>© 2017–2024</p>
+      </form>
+    </main>
+  )
+}
+
+export default Login
