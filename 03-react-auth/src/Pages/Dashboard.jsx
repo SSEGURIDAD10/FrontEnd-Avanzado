@@ -13,7 +13,7 @@ const Dashboard = () => {
           setUserData(response.data)
         }
       }catch(error){
-        console.log('Ocurrio un error en Dashboard', error)
+        console.log('Ocurrio un error en Dashboard Page', error)
       }
     }
     fetchUserData()
