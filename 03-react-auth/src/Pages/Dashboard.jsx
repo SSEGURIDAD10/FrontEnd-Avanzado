@@ -23,9 +23,9 @@ const Dashboard = () => {
     <>
     {userData?.first_name && <p>{userData.first_name}</p>}
     {userData?.last_name && <p>{userData.last_name}</p>}
-    {userData?.gender_name && <p>{userData.gender_name}</p>}
-    {userData?.email_name && <p>{userData.email_name}</p>}
-    {userData?.role_name && <p>{userData.role_name}</p>}
+    {userData?.gender && <p>{userData.gender}</p>}
+    {userData?.email && <p>{userData.email}</p>}
+    {userData?.role && <p>{userData.role}</p>}
     </>
   )
 }
