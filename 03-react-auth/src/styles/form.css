@@ -29,7 +29,7 @@
   .logo-react{
       margin-top: 10px;
       margin-left: 100px;
-      animation: rotation 3s linear infinite;
+      animation: rotation 2s linear infinite;
     }
   
     @keyframes rotation {
