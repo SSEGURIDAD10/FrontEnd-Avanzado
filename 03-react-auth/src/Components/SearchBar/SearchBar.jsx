@@ -3,7 +3,7 @@ import "./searchBar.css";
 const SearchBar = () => {
   return (
     <>
-      <div className="input-group mb-3 search-bar">
+      <div className="search-bar">
         <input
           type="text"
           className="form-control"

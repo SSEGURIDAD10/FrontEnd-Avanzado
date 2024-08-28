@@ -1,4 +1,38 @@
 .search-bar {
-    width: 90%;
-    margin: 15px auto;
+    display: flex;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Alinea el contenido verticalmente */
+    width: 80%; /* Ancho total de la barra de búsqueda */
+    margin: 20px auto; /* Centra la barra en la página con margen superior e inferior */
+    border-radius: 25px; /* Bordes redondeados */
+    overflow: hidden; /* Asegura que los elementos dentro del contenedor no se desborden */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil para darle profundidad */
+}
+
+.search-bar .form-control {
+    flex: 1; /* Hace que el input ocupe todo el espacio disponible */
+    border: none; /* Quita el borde predeterminado del input */
+    padding: 10px 15px; /* Espaciado interno para que se vea mejor */
+    font-size: 16px; /* Tamaño de fuente más grande para mejor legibilidad */
+    border-radius: 25px 0 0 25px; /* Redondea solo el borde izquierdo */
+}
+
+.search-bar .form-control:focus {
+    outline: none; /* Quita el borde azul que aparece al enfocar el input */
+    box-shadow: 0px 0px 5px rgba(0, 123, 255, 0.5); /* Añade un resplandor azul sutil al enfocar */
+}
+
+.search-bar .btn {
+    border: none; /* Quita el borde predeterminado del botón */
+    background-color: #dadada; /* Color de fondo azul del botón */
+    color: black; /* Color de texto blanco */
+    padding: 10px 20px; /* Espaciado interno del botón */
+    font-size: 16px; /* Tamaño de fuente */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    border-radius: 0 25px 25px 0; /* Redondea solo el borde derecho */
+    transition: background-color 0.3s ease; /* Transición suave al cambiar el color de fondo */
+}
+
+.search-bar .btn:hover {
+    background-color: #000; /* Color de fondo más oscuro al pasar el cursor */
 }
