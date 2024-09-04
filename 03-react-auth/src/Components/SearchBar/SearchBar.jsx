@@ -1,6 +1,6 @@
 import "./searchBar.css";
 
-//SearchBar edit
+//SearchBar
 const SearchBar = () => {
   return (
     <>
