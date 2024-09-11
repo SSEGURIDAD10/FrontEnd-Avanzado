@@ -1,9 +1,11 @@
 import { useAuthContext } from '../Hook/useAuthContext'
+import Counter from '../Components/Counter'
 
 const Secret = () => {
   const { userPayload } = useAuthContext();
   return (
     <>
+    <Counter />
     <h1>Secret</h1>
     {
       userPayload.role = 'ADMIN'
